@@ -1,4 +1,4 @@
-import FuckCSS from './components/day1-only-one/FuckCSS'
+import FuckCSS from './components/day2-horizon-progress/FuckCSS'
 
 function App() {
   return (
