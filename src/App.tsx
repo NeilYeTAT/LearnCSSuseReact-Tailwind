@@ -1,4 +1,4 @@
-import FuckCSS from './components/day2-horizon-progress/FuckCSS'
+import FuckCSS from './components/day3-use-shadow-make-dot/FuckCSS'
 
 function App() {
   return (
