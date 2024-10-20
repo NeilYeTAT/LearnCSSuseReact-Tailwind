@@ -1,4 +1,4 @@
-import FuckCSS from './components/day3-use-shadow-make-dot/FuckCSS'
+import FuckCSS from './components/day4-good-button/FuckCSS'
 
 function App() {
   return (
