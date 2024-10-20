@@ -1,4 +1,4 @@
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day1-only-one/Screenshot.png)
 
 给每个元素绑定唯一的 key, 这里使用 index 下标来作为.
 

@@ -1,4 +1,4 @@
-![screenshot](./Screenshot.png)
+![screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day2-horizon-progress/Screenshot.png)
 
 滚动动画, 使用第三方库 `framer-motion`.
 
