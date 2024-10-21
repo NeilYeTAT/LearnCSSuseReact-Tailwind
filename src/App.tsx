@@ -1,4 +1,4 @@
-import FuckCSS from './components/day4-good-button/FuckCSS'
+import FuckCSS from './components/day5-checkbox-instead-of-click/FuckCSS'
 
 function App() {
   return (
