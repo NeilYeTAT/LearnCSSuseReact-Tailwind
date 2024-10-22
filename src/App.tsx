@@ -1,4 +1,4 @@
-import FuckCSS from './components/day5-checkbox-instead-of-click/FuckCSS'
+import FuckCSS from './components/draft/FuckCSS'
 
 function App() {
   return (
