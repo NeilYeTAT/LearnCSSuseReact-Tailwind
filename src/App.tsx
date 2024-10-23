@@ -1,4 +1,4 @@
-import FuckCSS from './components/draft/FuckCSS'
+import FuckCSS from './components/day7-custom-native/FuckCSS'
 
 function App() {
   return (
