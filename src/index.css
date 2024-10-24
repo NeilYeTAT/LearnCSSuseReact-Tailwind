@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes ring1 {
+    100% {
+      transform: rotateX(70deg) rotateY(0deg) rotate(360deg);
+    }
+  }
+  @keyframes ring2 {
+    100% {
+      transform: rotateX(70deg) rotateY(60deg) rotate(360deg);
+    }
+  }
+  @keyframes ring3 {
+    100% {
+      transform: rotateX(70deg) rotateY(-60deg) rotate(360deg);
+    }
+  }
+}
