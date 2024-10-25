@@ -1,4 +1,4 @@
-import FuckCSS from './components/day8-atom/FuckCSS'
+import FuckCSS from './components/day9-selection-color/FuckCSS'
 
 function App() {
   return (
