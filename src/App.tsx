@@ -1,9 +1,9 @@
-import FuckCSS from './components/day10-frosted-glass/FuckCSS'
+import FuckCSS from './components/day11-calendar/FuckCSS'
 
 function App() {
   return (
     <div className="bg-blue-100 h-screen w-screen flex">
-      <FuckCSS></FuckCSS>
+      <FuckCSS defaultValue={new Date('2003-11-11')}></FuckCSS>
     </div>
   )
 }
