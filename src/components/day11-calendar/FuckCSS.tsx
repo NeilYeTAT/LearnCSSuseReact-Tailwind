@@ -24,6 +24,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
   const { defaultValue, onChange } = props
   const [date, setDate] = useState(defaultValue || new Date())
 
+  // 处理点击上个月和下个月的按扭点击事件
   const handlePrevMonth = () => {
     setDate(new Date(date.getFullYear(), date.getMonth() - 1, 1))
   }
@@ -31,41 +32,36 @@ const FuckCSS: React.FC<ICalendarType> = props => {
     setDate(new Date(date.getFullYear(), date.getMonth() + 1, 1))
   }
 
-  /**
-   * @param year
-   * @param month
-   * @returns 一个月一共有多少天
-   */
+  // 一个月有多少天
   const daysOfMonth = (year: number, month: number) => {
     return new Date(year, month + 1, 0).getDate()
   }
-  /**
-   * @param year
-   * @param month
-   * @returns 这个月 1号 是星期几?
-   */
+  // 这个月 1 号是星期几?
   const firstDayOfMonth = (year: number, month: number) => {
     return new Date(year, month, 1).getDay()
   }
 
-  //* 渲染组件的函数
-  const renderDates = () => {
-    const days = []
-
-    const daysCount = daysOfMonth(date.getFullYear(), date.getMonth())
+  // 只渲染上个月的日期
+  const renderPreviousDates = (days: JSX.Element[]) => {
     const firstDay = firstDayOfMonth(date.getFullYear(), date.getMonth())
 
-    // 提前渲染 empty 块占位
-    for (let i = 0; i < firstDay; i++) {
+    for (let i = firstDay - 1; i >= 0; i--) {
+      // 获取上个月最后几天
+      const currentDate = new Date(date.getFullYear(), date.getMonth(), -i)
       days.push(
         <div
-          key={`empty-${i}`}
-          className="w-[calc(100%/7)] text-center leading-[30px]"
-        ></div>,
+          key={`before-month-${i}`}
+          className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration200 text-gray-300"
+        >
+          {currentDate.getDate()}
+        </div>,
       )
     }
+  }
+  // 只渲染本月的日期
+  const renderCurrentDates = (days: JSX.Element[]) => {
+    const daysCount = daysOfMonth(date.getFullYear(), date.getMonth())
 
-    // 渲染实际的天数
     for (let i = 1; i <= daysCount; i++) {
       const clickHandler = () => {
         const currentDate = new Date(date.getFullYear(), date.getMonth(), i)
@@ -88,7 +84,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
         days.push(
           <div
             key={i}
-            className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration-300 text-gray-700"
+            className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration-200 text-gray-700"
             onClick={() => clickHandler()}
           >
             {i}
@@ -96,12 +92,40 @@ const FuckCSS: React.FC<ICalendarType> = props => {
         )
       }
     }
+  }
+  // 渲染下一个月的日期
+  const renderNextDates = (days: JSX.Element[]) => {
+    // 动态渲染到底是35 还是 42 ? 获取下个月是星期几开始? 如果是星期日开始说明日历填满了
+    const nextDate = new Date(date.getFullYear(), date.getMonth() + 1, 1)
+
+    if (nextDate.getDay() !== 0) {
+      // 获取上个月最后几天
+      for (let i = 1; i <= 7 - nextDate.getDay(); i++) {
+        days.push(
+          <div
+            key={`next-month-${i}`}
+            className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration-200 text-gray-300"
+          >
+            {i}
+          </div>,
+        )
+      }
+    }
+  }
+
+  //* 渲染组件的函数
+  const renderDates = () => {
+    const days: JSX.Element[] = []
+
+    renderPreviousDates(days)
+    renderCurrentDates(days)
+    renderNextDates(days)
 
     return days
   }
 
   return (
-    <div className="w-[270px] h-[287px] m-auto p-3 rounded-lg items-center justify-center bg-white/95 shadow-lg">
+    <div className="w-[270px] h-fit m-auto p-3 rounded-lg items-center justify-center bg-white/95 shadow-lg">
       <div className="flex justify-center items-center h-10 gap-4">
         <button
           onClick={handlePrevMonth}
@@ -119,7 +143,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
           &gt;
         </button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-y-1  ">
         <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
           日
         </div>
