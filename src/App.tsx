@@ -1,8 +1,8 @@
-import FuckCSS from './components/day12-grid/FuckCSS'
+import FuckCSS from './components/day11-calendar/FuckCSS'
 
 function App() {
   return (
-    <div className="bg-blue-100 h-screen w-screen flex flex-col gap-4">
+    <div className="flex h-screen w-screen flex-col gap-4 bg-blue-100">
       <FuckCSS></FuckCSS>
     </div>
   )

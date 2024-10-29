@@ -20,6 +20,17 @@ const monthName = [
   '十二',
 ]
 
+const daysOfTheWeek: string[] = ['日', '一', '二', '三', '四', '五', '六']
+
+// 一个月有多少天
+const daysOfMonth = (year: number, month: number) => {
+  return new Date(year, month + 1, 0).getDate()
+}
+// 这个月 1 号是星期几?
+const firstDayOfMonth = (year: number, month: number) => {
+  return new Date(year, month, 1).getDay()
+}
+
 const FuckCSS: React.FC<ICalendarType> = props => {
   const { defaultValue, onChange } = props
   const [date, setDate] = useState(defaultValue || new Date())
@@ -32,15 +43,6 @@ const FuckCSS: React.FC<ICalendarType> = props => {
     setDate(new Date(date.getFullYear(), date.getMonth() + 1, 1))
   }
 
-  // 一个月有多少天
-  const daysOfMonth = (year: number, month: number) => {
-    return new Date(year, month + 1, 0).getDate()
-  }
-  // 这个月 1 号是星期几?
-  const firstDayOfMonth = (year: number, month: number) => {
-    return new Date(year, month, 1).getDay()
-  }
-
   // 只渲染上个月的日期
   const renderPreviousDates = (days: JSX.Element[]) => {
     const firstDay = firstDayOfMonth(date.getFullYear(), date.getMonth())
@@ -51,7 +53,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
       days.push(
         <div
           key={`before-month-${i}`}
-          className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration200 text-gray-300"
+          className="duration200 w-[calc(100%/7)] cursor-pointer rounded-lg text-center font-sans font-light leading-[30px] text-gray-300 hover:bg-slate-200"
         >
           {currentDate.getDate()}
         </div>,
@@ -74,7 +76,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
         days.push(
           <div
             key={i}
-            className="w-[calc(100%/7)] text-center leading-[30px] cursor-pointer bg-black text-white rounded-lg font-sans "
+            className="w-[calc(100%/7)] cursor-pointer rounded-lg bg-black text-center font-sans leading-[30px] text-white"
             onClick={() => clickHandler()}
           >
             {i}
@@ -84,7 +86,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
         days.push(
           <div
             key={i}
-            className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration-200 text-gray-700"
+            className="w-[calc(100%/7)] cursor-pointer rounded-lg text-center font-sans font-light leading-[30px] text-gray-700 duration-200 hover:bg-slate-200"
             onClick={() => clickHandler()}
           >
             {i}
@@ -104,7 +106,7 @@ const FuckCSS: React.FC<ICalendarType> = props => {
         days.push(
           <div
             key={`next-month-${i}`}
-            className="w-[calc(100%/7)] text-center leading-[30px] hover:bg-slate-200 cursor-pointer font-sans font-light rounded-lg duration-200 text-gray-300"
+            className="w-[calc(100%/7)] cursor-pointer rounded-lg text-center font-sans font-light leading-[30px] text-gray-300 duration-200 hover:bg-slate-200"
           >
             {i}
           </div>,
@@ -124,12 +126,25 @@ const FuckCSS: React.FC<ICalendarType> = props => {
     return days
   }
 
+  const renderDaysOfTheWeek = () => {
+    return daysOfTheWeek.map((day, index) => {
+      return (
+        <div
+          className="w-[calc(100%/7)] text-center font-light leading-[30px] text-gray-500"
+          key={`day-${index}`}
+        >
+          {day}
+        </div>
+      )
+    })
+  }
+
   return (
-    <div className="w-[270px] h-fit m-auto p-3 rounded-lg items-center justify-center bg-white/95 shadow-lg">
-      <div className="flex justify-center items-center h-10 gap-4">
+    <div className="m-auto h-fit w-[270px] items-center justify-center rounded-lg bg-white/95 p-3 shadow-lg">
+      <div className="flex h-10 items-center justify-center gap-4">
         <button
           onClick={handlePrevMonth}
-          className="border px-2 rounded-lg text-lg font-serif"
+          className="rounded-lg border px-2 font-serif text-lg"
         >
           &lt;
         </button>
@@ -138,33 +153,14 @@ const FuckCSS: React.FC<ICalendarType> = props => {
         </div>
         <button
           onClick={handleNextMonth}
-          className="border px-2 rounded-lg text-lg font-serif"
+          className="rounded-lg border px-2 font-serif text-lg"
         >
           &gt;
         </button>
       </div>
-      <div className="flex flex-wrap gap-y-1  ">
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
-          日
-        </div>
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
-          一
-        </div>
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
-          二
-        </div>
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
-          三
-        </div>
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500  ">
-          四
-        </div>
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
-          五
-        </div>
-        <div className=" w-[calc(100%/7)] text-center leading-[30px]  font-light text-gray-500">
-          六
-        </div>
+      <div className="flex flex-wrap gap-y-1">
+        {/* 渲染顶部 7 天 */}
+        {renderDaysOfTheWeek()}
         {/* 渲染一个一个日期 */}
         {renderDates()}
       </div>
