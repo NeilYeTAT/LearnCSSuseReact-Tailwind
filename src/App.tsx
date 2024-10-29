@@ -1,8 +1,8 @@
-import FuckCSS from './components/day11-calendar/FuckCSS'
+import FuckCSS from './components/day13-drop-down-menu/FuckCSS'
 
 function App() {
   return (
-    <div className="flex h-screen w-screen flex-col gap-4 bg-blue-100">
+    <div className="flex h-screen w-screen flex-col items-center gap-4 bg-blue-100">
       <FuckCSS></FuckCSS>
     </div>
   )
