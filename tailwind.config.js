@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      cursor: {
+        YeDefault: "url('./src/assets/solid-circle-default.svg'), default",
+        YePointer: "url('./src/assets/solid-circle-pointer.svg'), pointer",
+      },
+    },
   },
   plugins: [
     // ...

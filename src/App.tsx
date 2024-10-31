@@ -1,8 +1,8 @@
-import FuckCSS from './components/day14-colorful-font/FuckCSS'
+import FuckCSS from './components/day15-custom-cursor-pointer/FuckCSS'
 
 function App() {
   return (
-    <div className="flex h-screen w-screen flex-col items-center gap-4 bg-slate-500">
+    <div className="flex h-screen w-screen cursor-YeDefault flex-col items-center gap-4 bg-blue-200">
       <FuckCSS></FuckCSS>
     </div>
   )
