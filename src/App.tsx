@@ -1,4 +1,4 @@
-import FuckCSS from './components/day15-custom-cursor-pointer/FuckCSS'
+import FuckCSS from './components/day16-good-border/FuckCSS'
 
 function App() {
   return (
