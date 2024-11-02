@@ -1,4 +1,4 @@
-import FuckCSS from './components/day16-good-border/FuckCSS'
+import FuckCSS from './components/day17-typing-animation/FuckCSS'
 
 function App() {
   return (
