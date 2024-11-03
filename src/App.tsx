@@ -1,4 +1,4 @@
-import FuckCSS from './components/day17-typing-animation/FuckCSS'
+import FuckCSS from './components/draft/FuckCSS'
 
 function App() {
   return (
