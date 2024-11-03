@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day6-nav-nav-TvT/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day006-nav-nav-TvT/Screenshot.png)
 
 今天的也比较简单, 现在才知道, 可以使用 tailwind 插件来修改滚动条的样式.
 

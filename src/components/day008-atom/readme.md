@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day8-atom/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day008-atom/Screenshot.png)
 
 动画效果是真的逆天, 老外写的代码可能是很久之前了, 用了一堆定位.
 

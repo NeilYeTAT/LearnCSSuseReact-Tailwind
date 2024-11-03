@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day13-drop-down-menu/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day013-drop-down-menu/Screenshot.png)
 
 今天是下拉列表, 好吧其实是左边列表跑路...
 

@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day16-good-border/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day016-good-border/Screenshot.png)
 
 再这样下去不行啊, 每天都不知道写什么, 明天或者后天, 得提前准备一个星期的CSS学习了...
 

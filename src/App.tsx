@@ -1,8 +1,8 @@
-import FuckCSS from './components/draft/FuckCSS'
+import FuckCSS from './components/day018-hamburger-button/FuckCSS'
 
 function App() {
   return (
-    <div className="flex h-screen w-screen cursor-YeDefault flex-col items-center gap-4 bg-blue-200">
+    <div className="flex h-screen w-screen flex-col items-center gap-4 bg-blue-200">
       <FuckCSS></FuckCSS>
     </div>
   )

@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day15-custom-cursor-pointer/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day015-custom-cursor-pointer/Screenshot.png)
 
 换了个鼠标样式, 切记调整图片大小...
 

@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day9-selection-color/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day009-selection-color/Screenshot.png)
 
 最有意思的一天, 不过碰到个逆天 bug, 就是选中时应该直接改整个类名, 而我懒, 只改一半, 结果搞了好久, 还以为不能这样玩...
 

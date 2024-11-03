@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day5-checkbox-instead-of-click/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day005-checkbox-instead-of-click/Screenshot.png)
 
 今天主要是尝试了一下 `tailwind` 中的根据子元素的状态或者兄弟元素的状态修改当前元素的状态.
 

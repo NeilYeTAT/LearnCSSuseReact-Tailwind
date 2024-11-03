@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day14-colorful-font/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day014-colorful-font/Screenshot.png)
 
 彩色字体, 关键就是 `text-transparent` 和 `bg-clip-text`
 

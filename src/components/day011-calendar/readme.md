@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day11-calendar/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day011-calendar/Screenshot.png)
 
 照着神光小册的日历组件, 没有封装很多方法, 只是渲染了 UI.
 

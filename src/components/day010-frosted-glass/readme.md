@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day10-frosted-glass/Screenshot.png)
+![Screenshot](https://github.com/NeilYeTAT/LearnCSSuseReact-Tailwind/blob/main/src/components/day010-frosted-glass/Screenshot.png)
 
 简单的毛玻璃模糊效果, 重点就是 `backdrop-blur-[14px]` , 其他的可选
 
