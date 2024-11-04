@@ -1,4 +1,4 @@
-import FuckCSS from './components/day018-hamburger-button/FuckCSS'
+import FuckCSS from './components/day019-repeat-background/FuckCSS'
 
 function App() {
   return (

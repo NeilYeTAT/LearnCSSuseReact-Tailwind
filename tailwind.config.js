@@ -7,6 +7,10 @@ export default {
         YeDefault: "url('./src/assets/solid-circle-default.svg'), default",
         YePointer: "url('./src/assets/solid-circle-pointer.svg'), pointer",
       },
+      backgroundImage: {
+        'diagonal-stripes':
+          'repeating-linear-gradient(45deg, black, black 11px, transparent 11px, transparent 20px)',
+      },
     },
   },
   plugins: [
