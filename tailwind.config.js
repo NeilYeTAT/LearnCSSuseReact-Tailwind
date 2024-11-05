@@ -10,6 +10,7 @@ export default {
       backgroundImage: {
         'diagonal-stripes':
           'repeating-linear-gradient(45deg, black, black 11px, transparent 11px, transparent 20px)',
+        'custom-radial-gradient': `radial-gradient(154.63px circle at var(--offset-x) var(--offset-y), #ffd6f1 0%, transparent 65%)`,
       },
     },
   },
