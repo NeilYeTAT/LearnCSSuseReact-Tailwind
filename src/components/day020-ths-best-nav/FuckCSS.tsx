@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function FuckCSS() {
   const [offsetX, setOffsetX] = useState(0)
   const [offsetY, setOffsetY] = useState(0)
   const [isHover, setIsHover] = useState(false)
 
+  const containerRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
-    const container: HTMLDivElement = document.querySelector('.container')!
+    const container = containerRef.current!
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = container.getBoundingClientRect() // 每次重新获取位置
@@ -23,9 +25,10 @@ export default function FuckCSS() {
 
   return (
     <div
-      className={`container relative mx-auto my-8 flex w-96 flex-nowrap items-center justify-center overflow-hidden rounded-3xl bg-white py-1 font-medium shadow-lg`}
+      className={`relative mx-auto my-8 flex w-96 flex-nowrap items-center justify-center overflow-hidden rounded-3xl bg-white py-1 font-medium shadow-lg`}
       onMouseMove={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      ref={containerRef}
     >
       <div
         className={`absolute left-0 top-0 h-full w-full`}
