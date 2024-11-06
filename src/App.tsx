@@ -1,4 +1,4 @@
-import FuckCSS from './components/day020-ths-best-nav/FuckCSS'
+import FuckCSS from './components/day021-highlight-card/FuckCSS'
 
 function App() {
   return (
