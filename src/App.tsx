@@ -1,8 +1,8 @@
-import FuckCSS from './components/day022-timeline/FuckCSS'
+import FuckCSS from './components/day023-highlight-background/FuckCSS'
 
 function App() {
   return (
-    <div className="relative flex w-screen flex-col items-center gap-4 bg-blue-200">
+    <div className="relative flex h-screen w-screen flex-col items-center gap-4 bg-blue-950">
       <FuckCSS></FuckCSS>
     </div>
   )
