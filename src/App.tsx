@@ -1,4 +1,4 @@
-import FuckCSS from './components/day023-highlight-background/FuckCSS'
+import FuckCSS from './components/day024-parallax/FuckCSS'
 
 function App() {
   return (
