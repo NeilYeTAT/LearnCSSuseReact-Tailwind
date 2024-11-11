@@ -1,4 +1,4 @@
-import FuckCSS from './components/day025-text-overflow/FuckCSS'
+import FuckCSS from './components/day026-drop-filter/FuckCSS'
 
 function App() {
   return (
