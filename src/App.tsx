@@ -1,8 +1,8 @@
-import FuckCSS from './components/day026-drop-filter/FuckCSS'
+import FuckCSS from './components/day027-sticky/FuckCSS'
 
 function App() {
   return (
-    <div className="relative flex h-screen w-screen flex-col items-center gap-4 bg-blue-200">
+    <div className=" flex h-[1500px] w-screen flex-col items-center gap-4 bg-blue-200">
       <FuckCSS></FuckCSS>
     </div>
   )
